@@ -21,8 +21,8 @@ Get a user's authentication token, using the password and either one of the user
 ````
 POST /users/authenticate/
     [?email={username}]
-    ?password={password}
-    [?username={username}]
+    &password={password}
+    [&username={username}]
 ````
 
 # Library
@@ -32,7 +32,7 @@ Get a user's library entries in a given section.
 ````
 GET /users/{username}/library
     ?auth_token={auth_token}
-    ?status={status}
+    &status={status}
 ````
 
 #Library Remove
@@ -52,11 +52,11 @@ Create or update an entry in a user's library
 ````
 POST /libraries/{anime_id}
     ?auth_token={auth_token}
-    [?episodes_watched={}]
-    [?increment_episodes={}]
-    [?notes={}]
-    [?privacy={}]
-    [?rating={}]
-    [?rewatched_times={}]
-    [?status={}]
+    [&episodes_watched={}]
+    [&increment_episodes={}]
+    [&notes={}]
+    [&privacy={}]
+    [&rating={}]
+    [&rewatched_times={}]
+    [&status={}]
 ````
