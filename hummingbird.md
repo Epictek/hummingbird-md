@@ -11,7 +11,7 @@ Provides basic information on the specified anime, such as its status (Currently
 
 ## Request
 ````
-    GET /anime/{anime-slug}
+GET /anime/{anime-slug}
     header: {X-Mashape-Key}
 ````
 
