@@ -12,15 +12,16 @@ Following are the available functions.
 
 # Anime
 Provides basic information on the specified anime, such as its status (Currently/Finished airing), url, alt title and genres.
+
 ## Request
 ````
 GET /anime/{anime-slug}
 ````
 
 # Authenticate
-## Request
 Get a user's authentication token, using the password and either one of the username and email.
 
+## Request
 ````
 GET /users/authenticate/
     [?email={username}]
@@ -29,9 +30,9 @@ GET /users/authenticate/
 ````
 
 # Library
-## Request
-
 Get a user's library entries in a given section.
+
+## Request
 ````
 GET /users/{username}/library
     ?auth_token={auth_token}
