@@ -11,7 +11,8 @@ Provides basic information on the specified anime, such as its status (Currently
 
 ## Request
 ````
-GET /anime/{anime-slug}
+    GET /anime/{anime-slug}
+    header: {X-Mashape-Key}
 ````
 
 # Authenticate
@@ -20,9 +21,10 @@ Get a user's authentication token, using the password and either one of the user
 ## Request
 ````
 POST /users/authenticate/
-    [?email={username}]
-    &password={password}
+    ?password={password}
+    [&email={username}]
     [&username={username}]
+    header: {X-Mashape-Key}
 ````
 
 # Library
@@ -33,19 +35,21 @@ Get a user's library entries in a given section.
 GET /users/{username}/library
     ?auth_token={auth_token}
     &status={status}
+    header: {X-Mashape-Key}
 ````
 
-#Library Remove
+# Library Remove
 Remove an entry from the user's library
 
 ## Request
-
 ````
 POST /libraries/{anime_id}/remove
     ?auth_token={auth_token}
+    header: {X-Mashape-Key}
+
 ````
 
-#Library Update
+# Library Update
 Create or update an entry in a user's library
 
 ## Request
@@ -59,4 +63,5 @@ POST /libraries/{anime_id}
     [&rating={}]
     [&rewatched_times={}]
     [&status={}]
+    header: {X-Mashape-Key}
 ````
